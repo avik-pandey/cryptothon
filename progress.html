@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+			{ label: "question 1",  y: 10  },
+			{ label: "question 2", y: 15  },
+			{ label: "question 3", y: 25  },
+			{ label: "question 4",  y: 30  },
+		]
+	}
+	]
+});
+chart.render();
+
+}
+</script>
+</head>
+<style type="text/css">
+body {
+    background-color:  #2e2e1f;
+}
+.button {
+	position: relative;
+	left: 400px;
+	top: 100px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#chartContainer{
+	position: relative;
+	left:300px;
+}
+</style>
+
+<body>
+<div id="chartContainer" style="height: 370px; width: 50%;"></div>
+<button class="button">UPDATE</button>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+</body>
+</html>
